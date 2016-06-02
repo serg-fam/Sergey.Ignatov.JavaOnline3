@@ -5,14 +5,14 @@ import java.util.Date;
 /**
  * Created by Serg-fam on 02.06.2016 on 9:22.
  */
-public class File {
+public class Files {
 
     private Date dateCreation;
     private String name;
     private String type;
     private float size;
 
-    public File(String name, String type) {
+    public Files(String name, String type) {
         this.name = name;
         this.type = type;
 
@@ -50,6 +50,5 @@ public class File {
     public void setSize(float size) {
         this.size = size;
     }
-
 
 }

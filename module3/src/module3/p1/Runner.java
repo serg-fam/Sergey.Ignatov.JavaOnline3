@@ -5,19 +5,27 @@ package module3.p1;
  */
 public class Runner {
 
+
+
     public static void main(String[] args) {
 
-        Folder folder = new Folder("c:/temp/", "Wait");
-        File text = new File("MyText", "Txt");
-        File image = new File("MyImage", "Img");
-        File audio = new File("MyAudio", "Audio");
+        FilesToFileSystem Allfiles = new FilesToFileSystem();
+
+       /* Folder folder = new Folder("c:/temp/", "Wait");
+
+
+        Files text = new Files("MyText", "txt");
+
+        Files image = new Files("MyImage", "img");
+
+        Files audio = new Files("MyAudio", "audio");
 
         System.out.println(folder);
         System.out.println(text);
         System.out.println(image);
-        System.out.println(audio);
-
-
+        System.out.println(audio); */
 
     }
+
 }
+

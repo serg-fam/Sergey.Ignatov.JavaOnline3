@@ -16,7 +16,7 @@ public class Folder {
 
     }
 
-    public String getPath() {
+    public String getPath(Folder folder) {
         return path;
     }
 
@@ -24,7 +24,7 @@ public class Folder {
         this.path = path;
     }
 
-    public String getName() {
+    public String getName(Folder folder) {
         return name;
     }
 
