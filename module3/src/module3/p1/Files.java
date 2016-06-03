@@ -13,27 +13,42 @@ public class Files {
 
     private String name;
     private String type;
-
+    private String yes;
 
     public Files() {
 
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Name to create file:");
 
-        try {
-            setName(reader.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        do {
 
 
-        System.out.println("Type file (txt or img or mp3):");
+            System.out.println("Name to create file:");
 
-        try {
-            setType(reader.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            try {
+                setName(reader.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            System.out.println("Type file (txt or img or mp3):");
+
+            try {
+                setType(reader.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            }
+
+            System.out.println("Create more files: y/n");
+            try {
+                yes = reader.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } while (yes.equals("y"));
+
     }
 
 

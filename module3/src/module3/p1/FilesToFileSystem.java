@@ -11,12 +11,13 @@ public class FilesToFileSystem {
     Folders folders = new Folders();
     Files files = new Files();
 
-    public FilesToFileSystem() {
+    public FilesToFileSystem() throws IOException {
 
 
         File folder = new File(folders.getPath());
 
         folder.mkdirs();
+
 
         File file = new File(folder.getPath(), ((files.getName()) + "." + (files.getType())));
 
@@ -29,6 +30,7 @@ public class FilesToFileSystem {
             e.printStackTrace();
         }
 
+
     }
 
     @Override
@@ -38,6 +40,6 @@ public class FilesToFileSystem {
 
                 "folders = " + folders.getPath() + ',' + '\n' +
 
-                "files = " + files.getName() + "." + files.getType() ;
+                "files = " + files.getName() + "." + files.getType();
     }
 }
