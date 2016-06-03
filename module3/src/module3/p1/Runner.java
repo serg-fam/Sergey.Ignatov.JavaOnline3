@@ -6,28 +6,13 @@ package module3.p1;
 public class Runner {
 
 
-
     public static void main(String[] args) {
 
 
+       FilesToFileSystem filesToFileSystem = new FilesToFileSystem();
 
-        FilesToFileSystem Allfiles = new FilesToFileSystem();
-
-       /* Folders folder = new Folders("c:/temp/", "Wait");
-
-
-        Files text = new Files("MyText", "txt");
-
-        Files image = new Files("MyImage", "img");
-
-        Files audio = new Files("MyAudio", "audio");
-
-        System.out.println(folder);
-        System.out.println(text);
-        System.out.println(image);
-        System.out.println(audio); */
-
+        System.out.println(filesToFileSystem);
     }
 
-}
+  }
 

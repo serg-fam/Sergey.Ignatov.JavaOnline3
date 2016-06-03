@@ -8,11 +8,11 @@ import java.io.IOException;
  */
 public class FilesToFileSystem {
 
+    Folders folders = new Folders();
+    Files files = new Files();
 
     public FilesToFileSystem() {
 
-        Folders folders = new Folders();
-        Files files = new Files();
 
         File folder = new File(folders.getPath());
 
@@ -29,10 +29,15 @@ public class FilesToFileSystem {
             e.printStackTrace();
         }
 
-        System.out.println(folders.getPath());
-        System.out.println(files.getName());
-        System.out.println(files.getType());
+    }
 
+    @Override
+    public String toString() {
 
+        return "FilesToFileSystem:" + '\n' +
+
+                "folders = " + folders.getPath() + ',' + '\n' +
+
+                "files = " + files.getName() + "." + files.getType() ;
     }
 }
