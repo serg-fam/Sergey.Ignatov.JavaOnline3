@@ -5,8 +5,8 @@ package module3.p1;
  */
 public class Image extends Files {
 
-    public Image (String name, String type) {
-        super(name, type);
+    public Image () {
+
     }
 
 }

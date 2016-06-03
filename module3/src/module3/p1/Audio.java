@@ -6,7 +6,7 @@ package module3.p1;
 public class Audio extends Files {
 
 
-    public Audio(String name, String type) {
-        super(name, type);
+    public Audio() {
+
     }
 }

@@ -1,30 +1,41 @@
 package module3.p1;
 
-import java.util.Date;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Created by Serg-fam on 02.06.2016 on 9:22.
  */
 public class Files {
 
-    private Date dateCreation;
+
     private String name;
     private String type;
-    private float size;
 
-    public Files(String name, String type) {
-        this.name = name;
-        this.type = type;
 
+    public Files() {
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Name to create file:");
+
+        try {
+            setName(reader.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        System.out.println("Type file (txt or img or mp3):");
+
+        try {
+            setType(reader.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public Date getDateCreation() {
-        return dateCreation;
-    }
-
-    public void setDateCreation(Date dateCreation) {
-        this.dateCreation = dateCreation;
-    }
 
     public String getName() {
         return name;
@@ -40,15 +51,6 @@ public class Files {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-
-    public float getSize() {
-        return size;
-    }
-
-    public void setSize(float size) {
-        this.size = size;
     }
 
 }

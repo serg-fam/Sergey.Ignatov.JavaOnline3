@@ -9,9 +9,11 @@ public class Runner {
 
     public static void main(String[] args) {
 
+
+
         FilesToFileSystem Allfiles = new FilesToFileSystem();
 
-       /* Folder folder = new Folder("c:/temp/", "Wait");
+       /* Folders folder = new Folders("c:/temp/", "Wait");
 
 
         Files text = new Files("MyText", "txt");
