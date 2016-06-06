@@ -5,5 +5,7 @@ package module3.p1;
  */
 public class Text  extends Files{
     public Text() {
+
+
     }
 }

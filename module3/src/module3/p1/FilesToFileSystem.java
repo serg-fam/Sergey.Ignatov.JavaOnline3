@@ -14,22 +14,37 @@ public class FilesToFileSystem {
     public FilesToFileSystem() throws IOException {
 
 
-        File folder = new File(folders.getPath());
-
-        folder.mkdirs();
+        for (String s : folders.getFolderList()) {
 
 
-        File file = new File(folder.getPath(), ((files.getName()) + "." + (files.getType())));
+            System.out.println(s);
+            File folder = new File(s);
+            folder.mkdirs();
 
-        try {
 
-            file.createNewFile();
+            for (String f : files.getFileName()) {
 
-        } catch (IOException e) {
+                System.out.println(f);
 
-            e.printStackTrace();
+                for (String t : files.getFileType()) {
+
+                    System.out.println(t);
+
+
+                    File file = new File(s, (f) + "." + (t));
+
+                    try {
+
+                        file.createNewFile();
+
+                    } catch (IOException e) {
+
+                        e.printStackTrace();
+                    }
+
+                }
+            }
         }
-
 
     }
 
