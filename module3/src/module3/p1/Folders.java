@@ -1,6 +1,7 @@
 package module3.p1;
 
 
+import javax.swing.text.html.parser.Parser;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,14 +11,11 @@ import java.util.List;
 /**
  * Created by Serg-fam on 02.06.2016 on 10:08.
  */
-public class Folders{
+public class Folders {
 
 
     private String path;
     private String yes;
-
-
-
     private String pathFolder;
     private List<String> folderList = new ArrayList<>();
 
@@ -25,7 +23,6 @@ public class Folders{
     public Folders() {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
 
 
         do {
@@ -36,7 +33,9 @@ public class Folders{
 
                 setPath(reader.readLine());
 
-             folderList.add(getPath());
+                folderList.add(getPath());
+
+
 
             } catch (IOException e) {
 
@@ -53,25 +52,29 @@ public class Folders{
             }
 
 
-
         } while (yes.equals("y"));
 
 
-        for (String s: folderList) {
+        for (String s : folderList) {
 
-            System.out.println(s);
+
+            System.out.println((folderList.lastIndexOf(s) + 1) + ". " + s);
+
+
         }
 
-        System.out.println("Path folders for create files :");
+        System.out.print("Path folders for create files, ");
+        System.out.println("1 - "+ folderList.size() + ":");
+
 
         try {
 
-          pathFolder = reader.readLine();
+            pathFolder = folderList.get(Integer.parseInt(reader.readLine())-1);
 
         } catch (IOException e) {
-
             e.printStackTrace();
         }
+
     }
 
     public String getPath() {
