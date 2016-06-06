@@ -15,6 +15,10 @@ public class Folders{
 
     private String path;
     private String yes;
+
+
+
+    private String pathFolder;
     private List<String> folderList = new ArrayList<>();
 
 
@@ -38,12 +42,6 @@ public class Folders{
 
             }
 
-         //   for ( String x : folderList) {
-
-
-           //     System.out.println(x);
-         //   }
-
 
             System.out.println("Create more folders: y/n");
             try {
@@ -54,7 +52,26 @@ public class Folders{
                 e.printStackTrace();
             }
 
+
+
         } while (yes.equals("y"));
+
+
+        for (String s: folderList) {
+
+            System.out.println(s);
+        }
+
+        System.out.println("Path folders for create files :");
+
+        try {
+
+          pathFolder = reader.readLine();
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
     }
 
     public String getPath() {
@@ -73,5 +90,12 @@ public class Folders{
         this.folderList = folderList;
     }
 
+    public String getPathFolder() {
+        return pathFolder;
+    }
+
+    public void setPathFolder(String pathFolder) {
+        this.pathFolder = pathFolder;
+    }
 }
 

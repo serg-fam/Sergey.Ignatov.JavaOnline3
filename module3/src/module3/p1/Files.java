@@ -18,9 +18,9 @@ public class Files {
     private String yes;
 
 
-
     private List<String> fileName = new ArrayList<>();
     private List<String> fileType = new ArrayList<>();
+
     public Files() {
 
 
@@ -36,7 +36,7 @@ public class Files {
 
                 fileName.add(getName());
 
-                for (String x: fileName ) {
+                for (String x : fileName) {
 
                     System.out.println(x);
                 }
@@ -54,7 +54,7 @@ public class Files {
 
                 fileType.add(getType());
 
-                for (String x: fileType ) {
+                for (String x : fileType) {
 
                     System.out.println(x);
                 }
@@ -63,6 +63,8 @@ public class Files {
                 e.printStackTrace();
 
             }
+
+            fileName.add(getName());
 
             System.out.println("Create more files: y/n");
             try {

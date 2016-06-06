@@ -31,7 +31,7 @@ public class FilesToFileSystem {
                     System.out.println(t);
 
 
-                    File file = new File(s, (f) + "." + (t));
+                    File file = new File(folders.getPathFolder(), (f) + "." + (t));
 
                     try {
 
