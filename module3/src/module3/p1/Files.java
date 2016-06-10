@@ -46,7 +46,9 @@ public class Files {
             }
 
 
-            System.out.println("Type file (txt or img or mp3):");
+            System.out.println("Type file: txt or 2 img or mp3,):");
+
+
 
             try {
 

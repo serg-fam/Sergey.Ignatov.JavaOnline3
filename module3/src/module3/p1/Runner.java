@@ -8,12 +8,17 @@ import java.io.IOException;
 public class Runner {
 
 
+
     public static void main(String[] args) throws IOException {
 
 
          FilesToFileSystem  filesToFileSystem = new FilesToFileSystem();
 
         System.out.println(filesToFileSystem);
+
+         Text text = new Text();
+
+        System.out.println(text);
     }
 
 }
