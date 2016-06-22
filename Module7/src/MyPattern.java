@@ -5,6 +5,6 @@ public class MyPattern {
 
     public static void main(String[] args) {
         System.out.println("Wait");
-        System.out.println("Comming soon");
+        System.out.println(" Comming soon ");
     }
 }
