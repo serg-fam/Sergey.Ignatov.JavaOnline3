@@ -3,6 +3,7 @@
  */
 public class MyCollection {
     public static void main(String[] args) {
+        System.out.println("Wait");
         System.out.println("Comming soon");
     }
 }
